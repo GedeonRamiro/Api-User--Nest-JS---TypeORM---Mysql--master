@@ -1,5 +1,5 @@
 import { IsEmail, IsOptional, IsEnum, MinLength } from 'class-validator';
-import { Role } from 'src/enums/role.enum';
+import { Role } from '../../enums/role.enum';
 
 export class CreateUserDto {
   @MinLength(3, { message: 'Nome muito curto' })

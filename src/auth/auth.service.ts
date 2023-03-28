@@ -9,8 +9,8 @@ import { MailerService } from '@nestjs-modules/mailer';
 import { UserEntity } from '../user/entity/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { PasswordBcryptjs } from 'src/password -bcryptjs/PasswordBcryptjs';
-import { UserService } from 'src/user/user.service';
+import { PasswordBcryptjs } from '../password -bcryptjs/PasswordBcryptjs';
+import { UserService } from '../user/user.service';
 
 @Injectable()
 export class AuthService {

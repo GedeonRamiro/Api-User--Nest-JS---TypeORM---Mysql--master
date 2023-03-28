@@ -15,7 +15,7 @@ export class Migrate1677842242058 implements MigrationInterface {
             unsigned: true,
           },
           {
-            name: 'lastName',
+            name: 'name',
             type: 'varchar',
             length: '45',
           },

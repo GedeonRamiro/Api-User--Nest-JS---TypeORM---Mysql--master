@@ -5,7 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { PasswordBcryptjs } from 'src/password -bcryptjs/PasswordBcryptjs';
+import { PasswordBcryptjs } from '../password -bcryptjs/PasswordBcryptjs';
 import { Like, Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdatePacthUserDto } from './dto/update-patch.dto';

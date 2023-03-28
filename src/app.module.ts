@@ -11,7 +11,9 @@ import { UserEntity } from './user/entity/user.entity';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      envFilePath: process.env.ENV === 'test' ? '.env.test' : '.env',
+    }),
     ThrottlerModule.forRoot({
       ttl: 60,
       limit: 100,
@@ -49,12 +51,13 @@ import { UserEntity } from './user/entity/user.entity';
       synchronize: process.env.ENV === 'development',
     }),
   ],
-
+  controllers: [],
   providers: [
     {
       provide: APP_GUARD,
       useClass: ThrottlerGuard,
     },
   ],
+  exports: [],
 })
 export class AppModule {}

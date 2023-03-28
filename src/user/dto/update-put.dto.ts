@@ -6,7 +6,7 @@ import {
   IsEnum,
   IsDate,
 } from 'class-validator';
-import { Role } from 'src/enums/role.enum';
+import { Role } from '../../enums/role.enum';
 
 export class UpdatePutUserDto {
   @MinLength(3, { message: 'Nome muito curto' })

@@ -1,6 +1,6 @@
 import { OmitType } from '@nestjs/mapped-types';
 import { IsDate, IsEnum, IsOptional } from 'class-validator';
-import { Role } from 'src/enums/role.enum';
+import { Role } from '../../enums/role.enum';
 import { CreateUserDto } from './create-user.dto';
 
 export class UpdatePacthUserDto extends OmitType(CreateUserDto, [
