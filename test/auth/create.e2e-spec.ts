@@ -68,8 +68,6 @@ describe('Create - Auth (e2e)', () => {
       .post('/auth/register')
       .send({});
 
-    console.log(resultRegister.body);
-
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
   });
@@ -83,8 +81,6 @@ describe('Create - Auth (e2e)', () => {
         password: '123456',
       });
 
-    console.log(resultRegister.body);
-
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
   });
@@ -96,8 +92,6 @@ describe('Create - Auth (e2e)', () => {
         email: 'gedeon@hotmail.com',
         password: '123456',
       });
-
-    console.log(resultRegister.body);
 
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
@@ -112,8 +106,6 @@ describe('Create - Auth (e2e)', () => {
         password: '123456',
       });
 
-    console.log(resultRegister.body);
-
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
   });
@@ -125,8 +117,6 @@ describe('Create - Auth (e2e)', () => {
         name: 'gedeon',
         password: '123456',
       });
-
-    console.log(resultRegister.body);
 
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
@@ -141,8 +131,6 @@ describe('Create - Auth (e2e)', () => {
         password: '123',
       });
 
-    console.log(resultRegister.body);
-
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
   });
@@ -154,8 +142,6 @@ describe('Create - Auth (e2e)', () => {
         name: 'gedeon',
         email: 'gedeonhotmail.com',
       });
-
-    console.log(resultRegister.body);
 
     expect(resultRegister.statusCode).toEqual(400);
     expect(resultRegister.body).toHaveProperty('message');
