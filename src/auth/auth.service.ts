@@ -100,6 +100,7 @@ export class AuthService {
   }
 
   async forget(email: string) {
+    console.log('Forget', email);
     const user = await this.usersRepository.findOneBy({
       email,
     });
