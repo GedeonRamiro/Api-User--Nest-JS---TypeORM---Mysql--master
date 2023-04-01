@@ -3,6 +3,7 @@ import {
   Body,
   Controller,
   FileTypeValidator,
+  Get,
   MaxFileSizeValidator,
   ParseFilePipe,
   Post,
@@ -43,6 +44,7 @@ export class AuthController {
 
   @Post('forget')
   async forget(@Body() { email }: AuthForgetDTO) {
+    console.log('Forget', email);
     return await this.authService.forget(email);
   }
 
@@ -52,9 +54,9 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard)
-  @Post('me')
-  async me(@UserDecorator('email') user) {
-    return { user };
+  @Get('me')
+  async me(@UserDecorator() user) {
+    return { user: { id: user.id, name: user.name, email: user.email } };
   }
 
   @UseInterceptors(FileInterceptor('file'))
